@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	kotlin("jvm") version "1.7.22"
-	kotlin("kapt") version "1.7.22"
-	kotlin("plugin.allopen") version "1.7.22"
+	kotlin("jvm") version "1.8.0"
+	kotlin("kapt") version "1.8.0"
+	kotlin("plugin.allopen") version "1.8.0"
 }
 
 group = "com.example"
