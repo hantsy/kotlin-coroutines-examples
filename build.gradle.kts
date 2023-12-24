@@ -23,7 +23,7 @@ dependencies {
 	implementation(platform("io.projectreactor:reactor-bom:2023.0.1"))
 
 	// build
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.0")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.1")
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib")
