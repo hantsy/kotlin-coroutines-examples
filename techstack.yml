@@ -1,0 +1,43 @@
+repo_name: hantsy/kotlin-coroutines-examples
+report_id: d33b516dc9e84cb1bb4e8430e982a564
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-31T08:34:45+00:00'
+requested_by: hantsy
+provider: github
+branch: master
+detected_tools_count: 3
+tools:
+- name: Kotlin
+  description: Statically typed Programming Language targeting JVM and JavaScript
+  website_url: https://kotlinlang.org/
+  open_source: true
+  hosted_saas: true
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/3750/pCfEzr6L.png
+  detection_source_url: https://github.com/hantsy/kotlin-coroutines-examples
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/hantsy/kotlin-coroutines-examples
+  detection_source: Repo Metadata
+- name: Gradle
+  description: A powerful build system for the JVM
+  website_url: https://www.gradle.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Java Build Tools
+  image_url: https://img.stackshare.io/service/975/gradlephant-social-black-bg.png
+  detection_source_url: https://github.com/hantsy/kotlin-coroutines-examples/blob/master/gradlew
+  detection_source: gradlew
+  last_updated_by: renovate[bot]
+  last_updated_on: 2023-08-17 09:10:06.000000000 Z
