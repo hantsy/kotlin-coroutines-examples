@@ -32,7 +32,7 @@ dependencies {
 	// test
 	// Junit
 	// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
-	testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
+	testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
 
 	// test helpers for Kotlin coroutines
 	testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutinesVersion}")
