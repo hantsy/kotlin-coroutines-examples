@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
 	kotlin("jvm") version "1.9.23"
-	kotlin("kapt") version "1.9.23"
+	kotlin("kapt") version "1.9.24"
 	kotlin("plugin.allopen") version "1.9.23"
 }
 
