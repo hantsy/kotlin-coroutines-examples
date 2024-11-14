@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	kotlin("jvm") version "2.0.21"
 	kotlin("kapt") version "2.0.21"
-	kotlin("plugin.allopen") version "2.0.20"
+	kotlin("plugin.allopen") version "2.0.21"
 }
 
 group = "com.example"
