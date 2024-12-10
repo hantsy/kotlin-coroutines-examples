@@ -20,7 +20,7 @@ val mockkVersion = project.properties["mockkVersion"]
 
 dependencies {
 	// import boms
-	implementation(platform("io.projectreactor:reactor-bom:2024.0.0"))
+	implementation(platform("io.projectreactor:reactor-bom:2024.0.1"))
 
 	// build
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.1")
