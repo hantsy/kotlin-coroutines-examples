@@ -1,6 +1,8 @@
 package com.example.demo
 
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -23,4 +25,19 @@ fun main(args: Array<String>) {
     }
 
     println("finishing......[${Thread.currentThread().name}]")
+
+    // delay in launch
+    runBlocking {
+        println("starting delayInLaunch in runBlocking...[${Thread.currentThread().name}]")
+        delayInLaunch()
+        println("finishing delayInLaunch in runBlocking...[${Thread.currentThread().name}]")
+    }
+}
+
+private suspend fun delayInLaunch() = coroutineScope {
+    launch(Dispatchers.IO){
+        println("starting launch a coroutineScope:[${Thread.currentThread().name}]")
+        delay(500L)
+        println("Ending launch a coroutineScope:[${Thread.currentThread().name}]")
+    }
 }

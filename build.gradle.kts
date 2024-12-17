@@ -8,7 +8,6 @@ plugins {
 
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
 	mavenCentral()
@@ -17,25 +16,32 @@ repositories {
 val coroutinesVersion = project.properties["coroutinesVersion"]
 val kotestVersion = project.properties["kotestVersion"]
 val mockkVersion = project.properties["mockkVersion"]
+val junitVersion = project.properties["junitVersion"]
+val reactorVersion = project.properties["reactorVersion"]
 
 dependencies {
 	// import boms
-	implementation(platform("io.projectreactor:reactor-bom:2024.0.1"))
+	implementation(platform("io.projectreactor:reactor-bom:${reactorVersion}"))
+	// https://mvnrepository.com/artifact/org.jetbrains.kotlinx/kotlinx-coroutines-bom
+	implementation(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:${coroutinesVersion}"))
+
 
 	// build
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.2")
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib")
-	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:${coroutinesVersion}")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 
 	// test
 	// Junit
+	testImplementation(platform("org.junit:junit-bom:${junitVersion}"))
+
 	// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
-	testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
+	testImplementation("org.junit.jupiter:junit-jupiter")
 
 	// test helpers for Kotlin coroutines
-	testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutinesVersion}")
+	testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
 
 	// Kotest assertions
 	testImplementation("io.kotest:kotest-assertions-core-jvm:${kotestVersion}")
@@ -45,10 +51,10 @@ dependencies {
 	testImplementation("io.projectreactor:reactor-test")
 }
 
-tasks.withType<KotlinCompile> {
-	kotlinOptions {
+kotlin{
+	jvmToolchain(21)
+	compilerOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "17"
 	}
 }
 
