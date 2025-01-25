@@ -6,7 +6,7 @@ import kotlinx.coroutines.runBlocking
 
 fun main() = runBlocking {
     val result = GlobalScope.async {
-        throw UnsupportedOperationException()
+        throw UnsupportedOperationException("async exception.")
     }
 
     try {
