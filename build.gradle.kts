@@ -27,7 +27,7 @@ dependencies {
 
 
 	// build
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.2")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.19.0")
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib")
